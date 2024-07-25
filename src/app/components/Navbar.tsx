@@ -32,7 +32,7 @@ export const Navbar = () => {
     return (
         <nav className="bg-[#29D674] p-4 font-bold text-white md:flex md:justify-between">
             <div className="container mx-auto flex items-center justify-between">
-                <a
+                <Link
                     href="/"
                     className="flex items-center text-2xl duration-500 hover:text-[#7429d6]"
                 >
@@ -44,7 +44,7 @@ export const Navbar = () => {
                         alt="Picture of the author"
                     />
                     Coada la prună
-                </a>
+                </Link>
                 <div className={getMenuClasses()}>
                     <Link
                         href="/"
