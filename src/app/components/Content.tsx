@@ -1,5 +1,9 @@
-import Link from 'next/link'
+import React from 'react'
 
-export const Content = () => {
-    return <main>content from Content Component</main>
+interface ContentProps {
+    children: React.ReactNode
+}
+
+export const Content: React.FC<ContentProps> = ({ children }) => {
+    return <main className="flex-1">{children}</main>
 }

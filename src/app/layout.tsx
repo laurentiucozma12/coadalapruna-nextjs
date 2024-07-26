@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import { Navbar } from './components/Navbar'
 import { Footer } from './components/Footer'
+import { Content } from './components/Content'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -23,9 +24,9 @@ export default function RootLayout({
                 <link rel="icon" href="/plum16x16.png" type="image/png" />
                 <link rel="icon" href="/plum16x16.svg" type="image/svg+xml" />
             </head>
-            <body className={inter.className}>
+            <body className={(inter.className, 'flex min-h-screen flex-col')}>
                 <Navbar />
-                {children}
+                <Content>{children}</Content>
                 <Footer />
             </body>
         </html>
