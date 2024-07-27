@@ -8,7 +8,7 @@ export default function Home() {
 
     return (
         <>
-            <div className="columns-1">
+            <div className="mx-0 columns-1 sm:mx-4">
                 <ImgCarousel />
             </div>
             <div className="me-4 ms-4 mt-4 columns-1 md:columns-3">
