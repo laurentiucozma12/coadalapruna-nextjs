@@ -51,14 +51,16 @@ export const Navbar = () => {
                 </Link>
                 <div className={getMenuClasses()}>
                     <Link
-                        href="/"
-                        className="mx-2 duration-500 hover:text-[#7429d6]"
+                        href="https://www.facebook.com/profile.php?id=100084996129874"
+                        className="mx-2 duration-500 hover:text-[#0866FF] hover:underline"
+                        target="_blank"
                     >
                         <FacebookOutlined /> Facebook
                     </Link>
                     <Link
-                        href="/"
-                        className="mx-2 duration-500 hover:text-[#7429d6]"
+                        href="https://www.tiktok.com/@nelubulea"
+                        className="mx-2 duration-500 hover:text-[#000000] hover:underline"
+                        target="_blank"
                     >
                         <TikTokOutlined /> TikTok
                     </Link>
