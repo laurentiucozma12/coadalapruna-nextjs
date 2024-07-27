@@ -10,7 +10,7 @@ export const Footer = () => {
             >
                 <span className="block sm:inline">© 2024 - Present </span>
                 <span className="block sm:inline">Copyright</span>
-                <span className="block sm:inline">by Laurențiu Cozma</span>
+                <span className="block sm:inline"> by Laurențiu Cozma</span>
             </Link>
         </footer>
     )
