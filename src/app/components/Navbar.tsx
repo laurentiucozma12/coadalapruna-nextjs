@@ -56,13 +56,13 @@ export const Navbar = () => {
                         href="/about"
                         className="mx-2 duration-500 hover:text-[#7429d6]"
                     >
-                        About
+                        Facebook
                     </Link>
                     <Link
                         href="/contact"
                         className="mx-2 duration-500 hover:text-[#7429d6]"
                     >
-                        Contact
+                        TikTok
                     </Link>
                 </div>
 

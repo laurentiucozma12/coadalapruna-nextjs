@@ -6,8 +6,8 @@ interface ContentProps {
 
 export const Content: React.FC<ContentProps> = ({ children }) => {
     return (
-        <main className="flex-1 p-4 md:flex md:justify-between">
-            <div className="container mx-auto flex">{children}</div>
+        <main className="flex-1 bg-[#bdd7c8] md:flex md:justify-between">
+            <div className="container mx-auto">{children}</div>
         </main>
     )
 }
