@@ -2,7 +2,11 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react'
-import { MenuOutlined } from '@ant-design/icons'
+import {
+    FacebookOutlined,
+    MenuOutlined,
+    TikTokOutlined,
+} from '@ant-design/icons'
 
 export const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false)
@@ -30,11 +34,11 @@ export const Navbar = () => {
     }
 
     return (
-        <nav className="bg-[#29D674] p-4 font-bold text-white md:flex md:justify-between">
+        <nav className="fixed z-50 w-full bg-[#29D674] p-4 font-bold text-white sm:bg-scroll md:flex md:justify-between">
             <div className="container mx-auto flex items-center justify-between">
                 <Link
                     href="/"
-                    className="flex items-center text-2xl duration-500 hover:text-[#7429d6]"
+                    className="flex items-center text-xl duration-500 hover:text-[#7429d6] sm:text-2xl"
                 >
                     <Image
                         className="me-2"
@@ -50,23 +54,17 @@ export const Navbar = () => {
                         href="/"
                         className="mx-2 duration-500 hover:text-[#7429d6]"
                     >
-                        Home
+                        <FacebookOutlined /> Facebook
                     </Link>
                     <Link
-                        href="/about"
+                        href="/"
                         className="mx-2 duration-500 hover:text-[#7429d6]"
                     >
-                        Facebook
-                    </Link>
-                    <Link
-                        href="/contact"
-                        className="mx-2 duration-500 hover:text-[#7429d6]"
-                    >
-                        TikTok
+                        <TikTokOutlined /> TikTok
                     </Link>
                 </div>
 
-                <div className="flex items-center text-2xl duration-500 hover:text-[#7429d6] md:hidden">
+                <div className="flex items-center text-xl duration-500 hover:text-[#7429d6] sm:text-2xl md:hidden">
                     <MenuOutlined
                         onClick={() => {
                             setIsOpen(!isOpen)

@@ -9,32 +9,32 @@ export const ImgCarousel: React.FC = () => {
     }
 
     return (
-        <Carousel afterChange={onChange} autoplay className="h-fit">
+        <Carousel afterChange={onChange} autoplay className="mt-[67px] h-fit">
             <div>
                 <Image
-                    className="h-96 object-cover"
+                    className="h-[140px] w-[640px] object-cover sm:h-96 sm:w-[1536px]"
                     src="/plum1.jpg"
                     alt="Image of a plum"
-                    width={1536}
-                    height={340}
+                    width={640}
+                    height={140}
                 />
             </div>
             <div>
                 <Image
-                    className="h-96 object-cover"
+                    className="h-[140px] w-[640px] object-cover sm:h-96 sm:w-[1536px]"
                     src="/plum2.jpg"
                     alt="Image of a plum"
-                    width={1536}
-                    height={340}
+                    width={640}
+                    height={140}
                 />
             </div>
             <div>
                 <Image
-                    className="h-96 object-cover"
+                    className="h-[140px] w-[640px] object-cover sm:h-96 sm:w-[1536px]"
                     src="/plum3.jpg"
                     alt="Image of a plum"
-                    width={1536}
-                    height={340}
+                    width={640}
+                    height={140}
                 />
             </div>
         </Carousel>
