@@ -1,13 +1,10 @@
-import Image, { StaticImageData } from 'next/image'
+import Image from 'next/image'
 import React from 'react'
 
-interface CardProps {
-    title: string
-    description: string
-    src: string
-}
-
-export const Card: React.FC<CardProps> = ({ title, description, src }) => {
+export const CardMeme = () => {
+    const src = '/meme.png'
+    const title = 'Meme 😂'
+    const description = 'O glumă pentru cei cu haz de năcaz.'
     return (
         <div className="mb-4 h-fit w-full overflow-hidden rounded bg-[#29D674] shadow-lg">
             <div className="m-3">
