@@ -9,7 +9,11 @@ export const ImgCarousel: React.FC = () => {
     }
 
     return (
-        <Carousel afterChange={onChange} autoplay className="mt-[67px] h-fit">
+        <Carousel
+            afterChange={onChange}
+            autoplay
+            className="mx-0 mt-2 h-fit columns-1"
+        >
             <div>
                 <Image
                     className="h-[140px] w-[640px] object-cover sm:h-96 sm:w-[1536px]"

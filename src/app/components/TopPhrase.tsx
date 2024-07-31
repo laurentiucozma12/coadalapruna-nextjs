@@ -1,10 +1,9 @@
 'use client'
-import { PhoneOutlined } from '@ant-design/icons'
 import React from 'react'
 import { useState } from 'react'
 import { Alert } from 'antd'
 
-export const CardContact = () => {
+export const TopPhrase = () => {
     const [showAlert, setShowAlert] = useState(false)
 
     const copyToClipboard = async (text: string) => {
@@ -16,7 +15,6 @@ export const CardContact = () => {
             console.error('Failed to copy: ', err)
         }
     }
-
     return (
         <>
             {showAlert && (
@@ -29,19 +27,18 @@ export const CardContact = () => {
                     className="fixed bottom-2 left-1/2 z-50 -translate-x-1/2 transform rounded"
                 />
             )}
-            <div className="m-2 cursor-pointer text-white">
+            <div className="mx-2 mb-2 mt-[75px] cursor-pointer">
                 {/*     
                 margin top is 75px (67px + 8px),
                 67px, because height of navbar is 67px 
                 8px because the rest of  the elements have a m-4 which is 16px
                 */}
-                <h2
-                    className="text-md rounded bg-[#29D674] p-4 text-center font-extrabold shadow-sm sm:text-2xl"
+                <h1
+                    className="text-md rounded bg-[#7429d6] p-4 text-center font-extrabold text-white shadow-sm sm:text-2xl"
                     onClick={() => copyToClipboard('0764237914')}
                 >
-                    Click pentru a copia numărul <br />
-                    <PhoneOutlined /> 0764237914 <PhoneOutlined />
-                </h2>
+                    Ai nevoie de sticle personalizate? <br /> Contactează-mă!
+                </h1>
             </div>
         </>
     )

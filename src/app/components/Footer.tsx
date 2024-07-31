@@ -9,9 +9,9 @@ export const Footer = () => {
                 className="duration-500 hover:text-[#7429d6] hover:underline"
             >
                 <span className="block sm:inline">© 2024 - Present </span>
-                <span className="block sm:inline">Copyright</span>
                 <span className="hidden sm:inline"> | </span>
-                <span className="block sm:inline">by Laurențiu Cozma</span>
+                <span className="block sm:inline">Copyright by</span>
+                <span className="block sm:inline"> Laurențiu Cozma</span>
             </Link>
         </footer>
     )
