@@ -3,7 +3,7 @@ import React from 'react'
 
 export const CardMeme = () => {
     return (
-        <div className="mb-0 h-fit w-full overflow-hidden rounded bg-[#29D674] text-white shadow-lg sm:mb-2">
+        <div className="mb-0 h-fit w-full overflow-hidden rounded bg-black text-white shadow-lg sm:mb-2">
             <div className="m-3">
                 <div className="mb-1 text-xl font-bold">Meme 😂</div>
                 <p className="text-base font-semibold">

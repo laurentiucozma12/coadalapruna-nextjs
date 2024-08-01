@@ -36,7 +36,7 @@ export const CardContact = () => {
                 8px because the rest of  the elements have a m-4 which is 16px
                 */}
                 <h2
-                    className="text-md rounded bg-[#29D674] p-4 text-center font-extrabold shadow-sm sm:text-2xl"
+                    className="text-md rounded bg-black p-4 text-center font-extrabold shadow-sm duration-500 sm:text-2xl"
                     onClick={() => copyToClipboard('0764237914')}
                 >
                     Click pentru a copia numărul <br />

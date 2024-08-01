@@ -34,7 +34,7 @@ export const TopPhrase = () => {
                 8px because the rest of  the elements have a m-4 which is 16px
                 */}
                 <h1
-                    className="text-md rounded bg-[#7429d6] p-4 text-center font-extrabold text-white shadow-sm sm:text-2xl"
+                    className="text-md rounded bg-black p-4 text-center font-extrabold text-white shadow-sm duration-500 sm:text-2xl"
                     onClick={() => copyToClipboard('0764237914')}
                 >
                     Ai nevoie de sticle personalizate? <br /> Contactează-mă!

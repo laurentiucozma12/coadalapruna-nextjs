@@ -34,7 +34,7 @@ export const Navbar = () => {
                 'flex-col',
                 'absolute',
                 'top-[60px]',
-                'bg-[#29D674]',
+                'bg-black',
                 'w-full',
                 'p-4',
                 'gap-4',
@@ -59,11 +59,11 @@ export const Navbar = () => {
                     className="fixed bottom-2 left-1/2 z-50 -translate-x-1/2 transform rounded"
                 />
             )}
-            <nav className="fixed z-40 w-full bg-[#29D674] p-4 font-bold text-white sm:bg-scroll md:flex md:justify-between">
+            <nav className="fixed z-40 w-full bg-black p-4 font-bold text-white shadow shadow-black sm:bg-scroll md:flex md:justify-between">
                 <div className="container mx-auto flex items-center justify-between">
                     <Link
                         href="/"
-                        className="flex items-center text-xl duration-500 hover:text-[#7429d6] sm:text-2xl"
+                        className="flex items-center text-xl duration-500 sm:text-2xl"
                     >
                         <Image
                             className="me-2"
@@ -76,7 +76,7 @@ export const Navbar = () => {
                     </Link>
                     <div className={getMenuClasses()}>
                         <span
-                            className="mx-2 flex duration-500 hover:cursor-pointer hover:text-[#7429d6]"
+                            className="mx-2 flex rounded px-1 duration-500 hover:cursor-pointer hover:bg-white hover:text-black"
                             onClick={() => copyToClipboard('0764237914')}
                         >
                             <PhoneOutlined />
@@ -84,7 +84,7 @@ export const Navbar = () => {
                         </span>
                         <Link
                             href="https://www.facebook.com/profile.php?id=100084996129874"
-                            className="mx-2 flex duration-500 hover:text-[#0866FF] hover:underline"
+                            className="mx-2 flex rounded px-1 duration-500 hover:bg-white hover:text-[#0866FF] hover:underline"
                             target="_blank"
                         >
                             <FacebookOutlined />
@@ -92,7 +92,7 @@ export const Navbar = () => {
                         </Link>
                         <Link
                             href="https://www.tiktok.com/@nelubulea"
-                            className="ms-2 flex duration-500 hover:text-black hover:underline"
+                            className="ms-2 flex rounded px-1 duration-500 hover:bg-white hover:text-black hover:underline"
                             target="_blank"
                         >
                             <TikTokOutlined />
