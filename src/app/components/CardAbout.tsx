@@ -5,7 +5,7 @@ export const CardAbout = () => {
     const src = '/bottles.png'
     const title = 'Despre mine'
     const description =
-        'Mă numesc Nelu Bulea și mă ocup cu confecționarea de sticle.'
+        'Mă numesc Nelu Bulea și creez confecțiuni personalizate în sticle de țuică.'
 
     return (
         <div className="mb-2 h-fit w-full overflow-hidden rounded bg-black text-white shadow-lg">
