@@ -7,9 +7,9 @@ import { TopPhrase } from './components/TopPhrase'
 export default function Home() {
     return (
         <>
+            <ImgCarousel />
             <TopPhrase />
             <CardContact />
-            <ImgCarousel />
             {/* Vrei să faci un cadou frumos și original cuiva drag? <br />
                 Sticlele personalizate pot fi un cadou minunat pentru diverse
                 ocazii sau evenimente, precum zile de naștere sau nunți. */}
