@@ -13,7 +13,7 @@ export const TopPhrase = () => {
                     className="text-md rounded bg-black p-4 text-center font-extrabold text-white shadow-sm duration-500 sm:text-2xl"
                     onClick={() => copyToClipboard('0764237914')}
                 >
-                    Ai nevoie de sticle personalizate? <br /> Contactează-mă!
+                    Ai nevoie de sticle personalizate? <br /> Contactează-mă
                 </h1>
             </div>
         </>

@@ -23,10 +23,14 @@ export const Navbar = () => {
                 'flex',
                 'flex-col',
                 'absolute',
-                'top-[60px]',
+                'justify-center',
+                // h-140px, height of carousel img is 140px
+                'h-[140px]',
+                // top-67px, height of navbar is 67px
+                'top-[67px]',
+                'p-2',
                 'bg-black',
                 'w-full',
-                'p-4',
                 'gap-4',
                 'left-0',
             ]
