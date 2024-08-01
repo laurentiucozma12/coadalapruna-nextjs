@@ -3,27 +3,17 @@ import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react'
+import useCopyToClipboard from '../hooks/useCopyToClipboard'
 import {
     FacebookOutlined,
     MenuOutlined,
     PhoneOutlined,
     TikTokOutlined,
 } from '@ant-design/icons'
-import { Alert } from 'antd'
 
 export const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false)
-    const [showAlert, setShowAlert] = useState(false)
-
-    const copyToClipboard = async (text: string) => {
-        try {
-            await navigator.clipboard.writeText(text)
-            setShowAlert(true)
-            setTimeout(() => setShowAlert(false), 3000)
-        } catch (err) {
-            console.error('Failed to copy: ', err)
-        }
-    }
+    const { copyToClipboard, AlertComponent } = useCopyToClipboard()
 
     function getMenuClasses() {
         let menuClasses = []
@@ -49,16 +39,7 @@ export const Navbar = () => {
 
     return (
         <>
-            {showAlert && (
-                <Alert
-                    message="Numărul de telefon a fost copiat cu success"
-                    type="success"
-                    showIcon
-                    closable
-                    onClose={() => setShowAlert(false)}
-                    className="fixed bottom-2 left-1/2 z-50 -translate-x-1/2 transform rounded"
-                />
-            )}
+            <AlertComponent />
             <nav className="fixed z-40 w-full bg-black p-4 font-bold text-white shadow shadow-black sm:bg-scroll md:flex md:justify-between">
                 <div className="container mx-auto flex items-center justify-between">
                     <Link
