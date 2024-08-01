@@ -81,7 +81,7 @@ export const Navbar = () => {
                         </Link>
                     </div>
 
-                    <div className="flex items-center text-xl duration-500 hover:text-[#7429d6] sm:text-2xl md:hidden">
+                    <div className="flex items-center text-xl duration-500 sm:text-2xl md:hidden">
                         <MenuOutlined
                             onClick={() => {
                                 setIsOpen(!isOpen)
