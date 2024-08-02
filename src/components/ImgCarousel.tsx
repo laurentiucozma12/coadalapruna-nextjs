@@ -16,8 +16,8 @@ export const ImgCarousel: React.FC = () => {
         >
             <Image
                 className="h-[140px] w-[640px] object-cover sm:h-96 sm:w-[1536px]"
-                src="/plum1.jpg"
-                alt="Image of a plum"
+                src="/sticla13.jpeg"
+                alt="Image of a bottle"
                 layout="responsive"
                 width={640}
                 height={140}
