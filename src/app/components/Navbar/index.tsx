@@ -1,45 +1,20 @@
+// components/Navbar/index.tsx
 'use client'
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { useState } from 'react'
-import useCopyToClipboard from '../hooks/useCopyToClipboard'
+import useCopyToClipboard from '../../hooks/useCopyToClipboard'
 import {
     FacebookOutlined,
     MenuOutlined,
     PhoneOutlined,
     TikTokOutlined,
 } from '@ant-design/icons'
+import useResponsiveMenu from './custom'
 
 export const Navbar = () => {
-    const [isOpen, setIsOpen] = useState(false)
     const { copyToClipboard, AlertComponent } = useCopyToClipboard()
-
-    function getMenuClasses() {
-        let menuClasses = []
-
-        if (isOpen) {
-            menuClasses = [
-                'flex',
-                'flex-col',
-                'absolute',
-                'justify-center',
-                // h-140px, height of carousel img is 140px
-                'h-[140px]',
-                // top-67px, height of navbar is 67px
-                'top-[67px]',
-                'p-2',
-                'bg-black',
-                'w-full',
-                'gap-4',
-                'left-0',
-            ]
-        } else {
-            menuClasses = ['hidden', 'md:flex']
-        }
-
-        return menuClasses.join(' ')
-    }
+    const { isOpen, setIsOpen, getMenuClasses } = useResponsiveMenu()
 
     return (
         <>
@@ -84,13 +59,8 @@ export const Navbar = () => {
                             <span className="ms-1">TikTok</span>
                         </Link>
                     </div>
-
                     <div className="flex items-center text-xl duration-500 sm:text-2xl md:hidden">
-                        <MenuOutlined
-                            onClick={() => {
-                                setIsOpen(!isOpen)
-                            }}
-                        />
+                        <MenuOutlined onClick={() => setIsOpen(!isOpen)} />
                     </div>
                 </div>
             </nav>

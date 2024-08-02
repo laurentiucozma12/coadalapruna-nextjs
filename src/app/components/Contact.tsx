@@ -3,7 +3,7 @@ import { PhoneOutlined } from '@ant-design/icons'
 import React from 'react'
 import useCopyToClipboard from '../hooks/useCopyToClipboard'
 
-export const CardContact = () => {
+export const Contact = () => {
     const { copyToClipboard, AlertComponent } = useCopyToClipboard()
 
     return (
