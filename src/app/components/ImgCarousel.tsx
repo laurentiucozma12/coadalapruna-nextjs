@@ -14,33 +14,30 @@ export const ImgCarousel: React.FC = () => {
             autoplay
             className="mx-0 mb-2 mt-[67px] h-fit columns-1"
         >
-            <div>
-                <Image
-                    className="h-[140px] w-[640px] object-cover sm:h-96 sm:w-[1536px]"
-                    src="/plum1.jpg"
-                    alt="Image of a plum"
-                    width={640}
-                    height={140}
-                />
-            </div>
-            <div>
-                <Image
-                    className="h-[140px] w-[640px] object-cover sm:h-96 sm:w-[1536px]"
-                    src="/plum2.jpg"
-                    alt="Image of a plum"
-                    width={640}
-                    height={140}
-                />
-            </div>
-            <div>
-                <Image
-                    className="h-[140px] w-[640px] object-cover sm:h-96 sm:w-[1536px]"
-                    src="/plum3.jpg"
-                    alt="Image of a plum"
-                    width={640}
-                    height={140}
-                />
-            </div>
+            <Image
+                className="h-[140px] w-[640px] object-cover sm:h-96 sm:w-[1536px]"
+                src="/plum1.jpg"
+                alt="Image of a plum"
+                layout="responsive"
+                width={640}
+                height={140}
+            />
+            <Image
+                className="h-[140px] w-[640px] object-cover sm:h-96 sm:w-[1536px]"
+                src="/plum2.jpg"
+                alt="Image of a plum"
+                layout="responsive"
+                width={640}
+                height={140}
+            />
+            <Image
+                className="h-[140px] w-[640px] object-cover sm:h-96 sm:w-[1536px]"
+                src="/plum3.jpg"
+                alt="Image of a plum"
+                layout="responsive"
+                width={640}
+                height={140}
+            />
         </Carousel>
     )
 }
