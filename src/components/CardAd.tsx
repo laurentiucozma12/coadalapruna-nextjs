@@ -19,6 +19,7 @@ export const CardAd = () => {
                 alt="Meme"
                 width={500}
                 height={500}
+                loading="lazy"
             />
         </div>
     )
