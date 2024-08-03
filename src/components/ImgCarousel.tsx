@@ -18,7 +18,7 @@ export const ImgCarousel: React.FC = () => {
             <div className="relative h-[300px]">
                 <Image
                     className="object-cover"
-                    src="/sticla1.jpg"
+                    src="/sticla1.webp"
                     alt="Image of a ..."
                     fill
                     sizes="100vw"
@@ -28,7 +28,7 @@ export const ImgCarousel: React.FC = () => {
             <div className="relative h-[300px]">
                 <Image
                     className="object-cover"
-                    src="/sticla2.jpg"
+                    src="/sticla2.webp"
                     alt="Image of a ..."
                     fill
                     sizes="100vw"
@@ -38,7 +38,7 @@ export const ImgCarousel: React.FC = () => {
             <div className="relative h-[300px]">
                 <Image
                     className="object-cover"
-                    src="/sticla3.jpg"
+                    src="/sticla3.webp"
                     alt="Image of a ..."
                     fill
                     sizes="100vw"

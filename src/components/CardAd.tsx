@@ -15,10 +15,10 @@ export const CardAd = () => {
             </div>
             <Image
                 className="h-auto w-full object-cover"
-                src="/meme.png"
+                src="/sticla4.webp"
                 alt="Meme"
-                width={500}
-                height={500}
+                width={480}
+                height={300}
                 loading="lazy"
             />
         </div>
