@@ -12,32 +12,36 @@ export const ImgCarousel: React.FC = () => {
         <Carousel
             afterChange={onChange}
             autoplay
-            className="mx-0 mb-2 mt-[67px] h-fit"
+            // top-67px cause navbar has 67px
+            className="top-[67px] mx-0 mb-2"
         >
-            <div className="relative h-[140px] w-[640px]">
+            <div className="relative h-[300px]">
                 <Image
-                    src="/plum1.webp"
-                    alt="Image of a bottle"
+                    className="object-cover"
+                    src="/sticla1.jpg"
+                    alt="Image of a ..."
                     fill
-                    objectFit="cover"
+                    sizes="100vw"
                     priority
                 />
             </div>
-            <div className="relative h-[140px] w-[640px]">
+            <div className="relative h-[300px]">
                 <Image
-                    src="/plum2.webp"
-                    alt="Image of a plum"
+                    className="object-cover"
+                    src="/sticla2.jpg"
+                    alt="Image of a ..."
                     fill
-                    objectFit="cover"
+                    sizes="100vw"
                     loading="lazy"
                 />
             </div>
-            <div className="relative h-[140px] w-[640px]">
+            <div className="relative h-[300px]">
                 <Image
-                    src="/plum3.webp"
-                    alt="Image of a plum"
+                    className="object-cover"
+                    src="/sticla3.jpg"
+                    alt="Image of a ..."
                     fill
-                    objectFit="cover"
+                    sizes="100vw"
                     loading="lazy"
                 />
             </div>
