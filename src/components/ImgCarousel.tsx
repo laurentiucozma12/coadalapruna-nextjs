@@ -8,43 +8,41 @@ export const ImgCarousel: React.FC = () => {
         console.log(currentSlide)
     }
 
+    const imgCarousel = [
+        {
+            id: 1,
+            uri: '/480x300/sticla1.webp',
+        },
+        {
+            id: 2,
+            uri: '/480x300/sticla2.webp',
+        },
+        {
+            id: 3,
+            uri: '/480x300/sticla3.webp',
+        },
+    ]
+
     return (
         <Carousel
             afterChange={onChange}
             autoplay
-            // top-67px cause navbar has 67px
+            // top-67px because the navbar has 67px
             className="top-[67px] mx-0 mb-2"
         >
-            <div className="relative h-[300px]">
-                <Image
-                    className="object-cover"
-                    src="/sticla1_480x300.webp"
-                    alt="Image of a ..."
-                    fill
-                    sizes="100vw"
-                    priority
-                />
-            </div>
-            <div className="relative h-[300px]">
-                <Image
-                    className="object-cover"
-                    src="/sticla2_480x300.webp"
-                    alt="Image of a ..."
-                    fill
-                    sizes="100vw"
-                    loading="lazy"
-                />
-            </div>
-            <div className="relative h-[300px]">
-                <Image
-                    className="object-cover"
-                    src="/sticla3_480x300.webp"
-                    alt="Image of a ..."
-                    fill
-                    sizes="100vw"
-                    loading="lazy"
-                />
-            </div>
+            {imgCarousel.map((image) => (
+                <div key={image.id} className="relative h-[300px]">
+                    <Image
+                        className="object-cover"
+                        src={image.uri}
+                        alt={`Sticla cu ornament ${image.id}`}
+                        fill
+                        sizes="100vw"
+                        priority={image.id === 1} // Use priority for the first image
+                        loading={image.id === 1 ? 'eager' : 'lazy'} // Use lazy loading for other images
+                    />
+                </div>
+            ))}
         </Carousel>
     )
 }
