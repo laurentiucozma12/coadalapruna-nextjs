@@ -9,7 +9,7 @@ const useCopyToClipboard = () => {
         try {
             await navigator.clipboard.writeText(text)
             setShowAlert(true)
-            setTimeout(() => setShowAlert(false), 300000)
+            setTimeout(() => setShowAlert(false), 3000)
         } catch (err) {
             console.error('Failed to copy: ', err)
         }
