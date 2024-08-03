@@ -1,0 +1,27 @@
+.ant-alert-close-icon svg {
+    color: white;
+}
+
+.ant-alert {
+    bottom: -20px;
+}
+@media (min-width: 640px) {
+    .ant-alert {
+        bottom: -15px;
+    }
+}
+@media (min-width: 768px) {
+    .ant-alert {
+        bottom: -10px;
+    }
+}
+@media (min-width: 1280px) {
+    .ant-alert {
+        bottom: -5px;
+    }
+}
+@media (min-width: 1536px) {
+    .ant-alert {
+        bottom: 0;
+    }
+}

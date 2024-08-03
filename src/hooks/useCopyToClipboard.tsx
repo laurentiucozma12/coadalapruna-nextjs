@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Alert } from 'antd'
+import './useCopyToClipboard.css'
 
 const useCopyToClipboard = () => {
     const [showAlert, setShowAlert] = useState(false)
@@ -8,7 +9,7 @@ const useCopyToClipboard = () => {
         try {
             await navigator.clipboard.writeText(text)
             setShowAlert(true)
-            setTimeout(() => setShowAlert(false), 3000)
+            setTimeout(() => setShowAlert(false), 300000)
         } catch (err) {
             console.error('Failed to copy: ', err)
         }
@@ -22,7 +23,13 @@ const useCopyToClipboard = () => {
                 showIcon
                 closable
                 onClose={() => setShowAlert(false)}
-                className="fixed bottom-2 left-1/2 z-50 -translate-x-1/2 transform rounded"
+                style={{
+                    left: '50%',
+                    transform: 'translate(-50%, -50%)',
+                    position: 'fixed',
+                    color: 'white',
+                    background: 'black',
+                }}
             />
         )
 

@@ -3,7 +3,7 @@
 -   Pentru nunti Ioan si Ioana ... sa ma focusez pe aspectul de nunti si evenimente
 -   Pentru barbati adevarati Florin si Teodor, etc.
 -   Zi de Tik Tok ca sunt sticle vandute
--   Pot sa prezint sticle specifice care au confectiuni specifice.. de exemplu cu:
+-   Pot sa prezint sticle specifice care au ornamente specifice.. de exemplu cu:
     -   pusca in sticla pentru vantatori
     -   pentru cantareti, sticla cu xacofon si vioara
 -   Chestii traditionala, poarta, clopotnita, vartelnita, fantana si scara... etc.
