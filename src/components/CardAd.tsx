@@ -15,7 +15,7 @@ export const CardAd = () => {
             </div>
             <Image
                 className="h-auto w-full object-cover"
-                src="/sticla4.webp"
+                src="/sticla4_480x300.webp"
                 alt="Meme"
                 width={480}
                 height={300}
