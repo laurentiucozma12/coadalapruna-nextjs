@@ -21,7 +21,7 @@ const Card: React.FC<CardProps> = ({
                 <p className="text-base font-semibold">{description}</p>
             </div>
             <Image
-                className="h-auto w-full object-cover"
+                className="h-auto w-full object-cover text-red-200"
                 src={imageSrc}
                 alt={imageAlt}
                 width={480}
