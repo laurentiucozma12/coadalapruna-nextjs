@@ -1,8 +1,3 @@
-# ToDo List
-
--   si local storage
--   de ce imi apar toate imaginile pe pagina la carusel cand se loadeaza pagina, sa folosesc un loading state
-
 # NextJs
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
