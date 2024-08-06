@@ -1,8 +1,8 @@
 import Link from 'next/link'
 import Card from '../components/Card'
 import { Contact } from '../components/Contact'
-import { ImgCarousel } from '../components/ImgCarousel'
-import { TopPhrase } from '../components/TopPhrase'
+import { ImgCarousel } from '../components/Carousel'
+import { TopPhrase } from '@/components/TopPhrase'
 
 export default function Home() {
     return (
@@ -25,7 +25,7 @@ export default function Home() {
                                     href="https://www.tiktok.com/@nelubulea"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="w-fit rounded px-1 duration-500 hover:bg-white hover:text-black hover:underline"
+                                    className="inline-block w-fit rounded px-1 duration-500 hover:bg-white hover:text-black hover:underline"
                                 >
                                     TikTok: nelubulea
                                 </Link>

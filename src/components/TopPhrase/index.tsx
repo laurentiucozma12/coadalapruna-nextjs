@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import useCopyToClipboard from '../hooks/useCopyToClipboard'
+import useCopyToClipboard from '../../hooks/useCopyToClipboard'
 
 export const TopPhrase = () => {
     const { copyToClipboard, AlertComponent } = useCopyToClipboard()

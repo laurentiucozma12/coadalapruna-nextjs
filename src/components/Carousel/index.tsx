@@ -1,7 +1,9 @@
 'use client'
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { Carousel } from 'antd'
 import Image from 'next/image'
+import './style.css'
+import { useImgCarousel } from './custom'
 
 const CarouselPlaceholder: React.FC = () => {
     return (
@@ -12,38 +14,11 @@ const CarouselPlaceholder: React.FC = () => {
 }
 
 export const ImgCarousel: React.FC = () => {
-    const [initialized, setInitialized] = useState(false)
-
-    const onChange = (currentSlide: number) => {
-        console.log(currentSlide)
-    }
-
-    useEffect(() => {
-        // Add a slight delay to ensure the carousel has initialized
-        const timer = setTimeout(() => {
-            setInitialized(true)
-        }, 1000) // Adjust the delay as necessary
-        return () => clearTimeout(timer)
-    }, [])
-
-    const imgCarousel = [
-        {
-            id: 1,
-            uri: '/480x300/sticla1.webp',
-        },
-        {
-            id: 2,
-            uri: '/480x300/sticla2.webp',
-        },
-        {
-            id: 3,
-            uri: '/480x300/sticla3.webp',
-        },
-    ]
+    const { initialized, onChange, imgCarousel } = useImgCarousel()
 
     return (
+        // top-[67px] because Navbar has height: 67px
         <div className="relative top-[67px] mx-0 mb-2">
-            {/* Ensure the carousel has the same height as the placeholder */}
             <div className="relative h-[300px]">
                 {!initialized && <CarouselPlaceholder />}
                 {initialized && (

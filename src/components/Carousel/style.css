@@ -1,0 +1,7 @@
+.slick-slider {
+    display: none;
+}
+.slick-active,
+.slick-current {
+    display: block;
+}

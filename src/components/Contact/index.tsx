@@ -1,7 +1,7 @@
 'use client'
 import { PhoneOutlined } from '@ant-design/icons'
 import React from 'react'
-import useCopyToClipboard from '../hooks/useCopyToClipboard'
+import useCopyToClipboard from '../../hooks/useCopyToClipboard'
 
 export const Contact = () => {
     const { copyToClipboard, AlertComponent } = useCopyToClipboard()
