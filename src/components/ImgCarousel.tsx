@@ -43,26 +43,31 @@ export const ImgCarousel: React.FC = () => {
 
     return (
         <div className="relative top-[67px] mx-0 mb-2">
-            {!initialized && <CarouselPlaceholder />}
-            <Carousel
-                afterChange={onChange}
-                autoplay
-                className={`transition-opacity duration-500 ${initialized ? 'opacity-100' : 'opacity-0'} `}
-            >
-                {imgCarousel.map((image) => (
-                    <div key={image.id} className="relative h-[300px]">
-                        <Image
-                            className="object-cover"
-                            src={image.uri}
-                            alt={`Sticla cu ornament ${image.id}`}
-                            fill
-                            sizes="100vw"
-                            priority={image.id === 1} // Use priority for the first image
-                            loading={image.id === 1 ? 'eager' : 'lazy'} // Use lazy loading for other images
-                        />
-                    </div>
-                ))}
-            </Carousel>
+            {/* Ensure the carousel has the same height as the placeholder */}
+            <div className="relative h-[300px]">
+                {!initialized && <CarouselPlaceholder />}
+                {initialized && (
+                    <Carousel
+                        afterChange={onChange}
+                        autoplay
+                        className="opacity-100 transition-opacity duration-500"
+                    >
+                        {imgCarousel.map((image) => (
+                            <div key={image.id} className="relative h-[300px]">
+                                <Image
+                                    className="object-cover"
+                                    src={image.uri}
+                                    alt={`Sticla cu ornament ${image.id}`}
+                                    fill
+                                    sizes="100vw"
+                                    priority={image.id === 1} // Use priority for the first image
+                                    loading={image.id === 1 ? 'eager' : 'lazy'} // Use lazy loading for other images
+                                />
+                            </div>
+                        ))}
+                    </Carousel>
+                )}
+            </div>
         </div>
     )
 }
