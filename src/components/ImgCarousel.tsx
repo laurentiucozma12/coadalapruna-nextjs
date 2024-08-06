@@ -47,11 +47,12 @@ export const ImgCarousel: React.FC = () => {
             <Carousel
                 afterChange={onChange}
                 autoplay
-                className={`transition-opacity duration-500 ${initialized ? 'opacity-100' : 'opacity-0'}`}
+                className={`transition-opacity duration-500 ${initialized ? 'opacity-100' : 'opacity-0'} `}
             >
                 {imgCarousel.map((image) => (
                     <div key={image.id} className="relative h-[300px]">
                         <Image
+                            className="object-cover"
                             src={image.uri}
                             alt={`Sticla cu ornament ${image.id}`}
                             fill
