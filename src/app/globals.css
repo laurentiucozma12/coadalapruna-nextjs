@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.slick-slider {
+    display: none;
+}
+.slick-active,
+.slick-current {
+    display: block;
+}

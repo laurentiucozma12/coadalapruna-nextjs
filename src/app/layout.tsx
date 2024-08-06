@@ -25,7 +25,7 @@ export default function RootLayout({
                 <link rel="icon" href="/plum16x16.svg" type="image/svg+xml" />
             </head>
             <body className={(inter.className, 'flex min-h-screen flex-col')}>
-                <Navbar />
+                {/* <Navbar /> */}
                 <Content>{children}</Content>
                 <Footer />
             </body>

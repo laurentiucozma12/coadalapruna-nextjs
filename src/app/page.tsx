@@ -7,7 +7,7 @@ import { TopPhrase } from '../components/TopPhrase'
 export default function Home() {
     return (
         <>
-            {/* <ImgCarousel /> */}
+            <ImgCarousel />
             <TopPhrase />
             <Contact />
             <div className="m-2 columns-1 sm:columns-2 lg:columns-3">
