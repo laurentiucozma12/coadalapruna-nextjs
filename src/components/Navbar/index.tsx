@@ -10,6 +10,7 @@ import {
     TikTokOutlined,
 } from '@ant-design/icons'
 import useResponsiveMenu from './custom'
+import LoadingIcon from '@/hooks/loadingIcon'
 
 export const Navbar = () => {
     const { copyToClipboard, AlertComponent } = useCopyToClipboard()
@@ -38,7 +39,7 @@ export const Navbar = () => {
                             className="mx-2 flex rounded px-1 duration-500 hover:cursor-pointer hover:bg-white hover:text-black"
                             onClick={() => copyToClipboard('0764237914')}
                         >
-                            <PhoneOutlined />
+                            <LoadingIcon Icon={PhoneOutlined} />
                             <span className="ms-1">0764237914</span>
                         </span>
                         <Link
@@ -46,7 +47,7 @@ export const Navbar = () => {
                             className="mx-2 flex rounded px-1 duration-500 hover:bg-white hover:text-[#0866FF] hover:underline"
                             target="_blank"
                         >
-                            <FacebookOutlined />
+                            <LoadingIcon Icon={FacebookOutlined} />
                             <span className="ms-1">Facebook</span>
                         </Link>
                         <Link
@@ -54,7 +55,7 @@ export const Navbar = () => {
                             className="ms-2 flex rounded px-1 duration-500 hover:bg-white hover:text-black hover:underline"
                             target="_blank"
                         >
-                            <TikTokOutlined />
+                            <LoadingIcon Icon={TikTokOutlined} />
                             <span className="ms-1">TikTok</span>
                         </Link>
                     </div>
