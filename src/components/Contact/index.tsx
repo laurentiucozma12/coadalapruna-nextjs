@@ -1,11 +1,11 @@
 'use client'
-import { PhoneOutlined, LoadingOutlined } from '@ant-design/icons'
+import { PhoneOutlined } from '@ant-design/icons'
 import React, { useState } from 'react'
 import useCopyToClipboard from '../../hooks/useCopyToClipboard'
+import { Suspense } from 'react'
 
 export const Contact = () => {
     const { copyToClipboard, AlertComponent } = useCopyToClipboard()
-    const [loading, setLoading] = useState(false)
 
     return (
         <>
@@ -18,9 +18,15 @@ export const Contact = () => {
                     Contactează-mă pentru a putea creea un cadou frumos celor
                     dragi ție.
                     <br />
-                    {loading ? <LoadingOutlined /> : <PhoneOutlined />}{' '}
-                    0764237914{' '}
-                    {loading ? <LoadingOutlined /> : <PhoneOutlined />}
+                    <span className="inline-block">
+                        <Suspense>
+                            <PhoneOutlined />
+                        </Suspense>{' '}
+                        0764237914{' '}
+                        <Suspense>
+                            <PhoneOutlined />
+                        </Suspense>
+                    </span>
                 </h2>
             </div>
         </>
