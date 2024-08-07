@@ -1,21 +1,20 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
+import Skeleton, { SkeletonTheme } from 'react-loading-skeleton'
 
-interface LoadingIconProps {
-    Icon: React.FC
+interface UseLoadingIconProps {
+    isLoading: boolean
+    width: number
+    text: React.ReactNode
 }
 
-const LoadingIcon: React.FC<LoadingIconProps> = ({ Icon }) => {
-    const [loading, setLoading] = useState(true)
-
-    useEffect(() => {
-        const timer = setTimeout(() => {
-            setLoading(false)
-        }, 1000)
-
-        return () => clearTimeout(timer)
-    }, [])
-
-    return loading ? <></> : <Icon />
+const useLoadingIcon = ({ isLoading, width, text }: UseLoadingIconProps) => {
+    return isLoading ? (
+        <SkeletonTheme baseColor="#202020" highlightColor="#444">
+            <Skeleton width={width} />
+        </SkeletonTheme>
+    ) : (
+        <>{text}</>
+    )
 }
 
-export default LoadingIcon
+export default useLoadingIcon

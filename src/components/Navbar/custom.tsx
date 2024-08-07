@@ -1,4 +1,7 @@
+'use client'
 import { useState } from 'react'
+import useLoadingIcon from '@/hooks/loadingIcon'
+import React from 'react'
 
 const useResponsiveMenu = () => {
     const [isOpen, setIsOpen] = useState(false)
@@ -30,4 +33,29 @@ const useResponsiveMenu = () => {
     return { isOpen, setIsOpen, getMenuClasses }
 }
 
-export default useResponsiveMenu
+interface LoadingIconWrapperProps {
+    isLoading: boolean
+    Icon: React.FC
+    label: string
+}
+
+const LoadingIconWrapper: React.FC<LoadingIconWrapperProps> = ({
+    isLoading,
+    Icon,
+    label,
+}) => {
+    const loadingIcon = useLoadingIcon({
+        isLoading,
+        width: 16,
+        text: <Icon />,
+    })
+
+    return (
+        <>
+            {loadingIcon}
+            <span className="ms-1">{label}</span>
+        </>
+    )
+}
+
+export { useResponsiveMenu, LoadingIconWrapper }

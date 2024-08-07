@@ -10,7 +10,7 @@ export const TopPhrase = () => {
             <AlertComponent />
             <div className="mx-2 mb-2 mt-[76px] cursor-pointer">
                 <h1
-                    className="rounded bg-black p-2 text-center text-lg font-bold text-white shadow-sm duration-500 sm:text-2xl"
+                    className="rounded bg-black p-2 text-center text-lg font-bold text-white caret-transparent shadow-sm duration-500 sm:text-2xl"
                     onClick={() => copyToClipboard('0764237914')}
                 >
                     Ai nevoie de un cadou pentru un bărbat adevarat sau de un

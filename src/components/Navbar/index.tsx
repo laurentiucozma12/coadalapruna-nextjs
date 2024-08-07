@@ -1,5 +1,5 @@
 'use client'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import useCopyToClipboard from '../../hooks/useCopyToClipboard'
@@ -9,12 +9,39 @@ import {
     PhoneOutlined,
     TikTokOutlined,
 } from '@ant-design/icons'
-import useResponsiveMenu from './custom'
-import LoadingIcon from '@/hooks/loadingIcon'
+import { LoadingIconWrapper, useResponsiveMenu } from './custom'
 
 export const Navbar = () => {
     const { copyToClipboard, AlertComponent } = useCopyToClipboard()
     const { isOpen, setIsOpen, getMenuClasses } = useResponsiveMenu()
+
+    const [loadingStates, setLoadingStates] = useState({
+        phone: true,
+        facebook: true,
+        tikTok: true,
+    })
+
+    useEffect(() => {
+        const timers = {
+            phone: setTimeout(
+                () => setLoadingStates((prev) => ({ ...prev, phone: false })),
+                1000
+            ),
+            facebook: setTimeout(
+                () =>
+                    setLoadingStates((prev) => ({ ...prev, facebook: false })),
+                1000
+            ),
+            tikTok: setTimeout(
+                () => setLoadingStates((prev) => ({ ...prev, tikTok: false })),
+                1000
+            ),
+        }
+
+        return () => {
+            Object.values(timers).forEach((timer) => clearTimeout(timer))
+        }
+    }, [])
 
     return (
         <>
@@ -36,27 +63,36 @@ export const Navbar = () => {
                     </Link>
                     <div className={getMenuClasses()}>
                         <span
-                            className="mx-2 flex rounded px-1 duration-500 hover:cursor-pointer hover:bg-white hover:text-black"
+                            className="mx-2 flex rounded px-1 caret-transparent duration-500 hover:cursor-pointer hover:bg-white hover:text-black"
                             onClick={() => copyToClipboard('0764237914')}
                         >
-                            <LoadingIcon Icon={PhoneOutlined} />
-                            <span className="ms-1">0764237914</span>
+                            <LoadingIconWrapper
+                                isLoading={loadingStates.phone}
+                                Icon={PhoneOutlined}
+                                label="0764237914"
+                            />
                         </span>
                         <Link
                             href="https://www.facebook.com/profile.php?id=100084996129874"
                             className="mx-2 flex rounded px-1 duration-500 hover:bg-white hover:text-[#0866FF] hover:underline"
                             target="_blank"
                         >
-                            <LoadingIcon Icon={FacebookOutlined} />
-                            <span className="ms-1">Facebook</span>
+                            <LoadingIconWrapper
+                                isLoading={loadingStates.facebook}
+                                Icon={FacebookOutlined}
+                                label="Facebook"
+                            />
                         </Link>
                         <Link
                             href="https://www.tiktok.com/@nelubulea"
                             className="ms-2 flex rounded px-1 duration-500 hover:bg-white hover:text-black hover:underline"
                             target="_blank"
                         >
-                            <LoadingIcon Icon={TikTokOutlined} />
-                            <span className="ms-1">TikTok</span>
+                            <LoadingIconWrapper
+                                isLoading={loadingStates.tikTok}
+                                Icon={TikTokOutlined}
+                                label="TikTok"
+                            />
                         </Link>
                     </div>
                     <div className="flex items-center text-xl duration-500 sm:text-2xl md:hidden">
