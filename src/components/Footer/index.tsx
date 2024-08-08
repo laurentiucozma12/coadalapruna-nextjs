@@ -16,5 +16,3 @@ export const Footer = () => {
         </footer>
     )
 }
-
-// test

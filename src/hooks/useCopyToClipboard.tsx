@@ -37,5 +37,3 @@ const useCopyToClipboard = () => {
 }
 
 export default useCopyToClipboard
-
-// test

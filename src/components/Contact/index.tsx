@@ -28,6 +28,5 @@ export const Contact = () => {
                 </h2>
             </div>
         </>
-        // test
     )
 }

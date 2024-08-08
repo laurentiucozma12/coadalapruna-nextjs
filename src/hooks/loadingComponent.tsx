@@ -24,5 +24,3 @@ const useLoadingComponent = ({
 }
 
 export default useLoadingComponent
-
-// test
