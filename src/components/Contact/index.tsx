@@ -32,7 +32,7 @@ export const Contact = () => {
             <AlertComponent />
             <div className="flex h-full cursor-pointer flex-col">
                 <h2
-                    className="flex flex-grow items-center justify-center rounded bg-black px-3 text-center text-lg font-bold text-white caret-transparent duration-500 xl:text-2xl"
+                    className="flex flex-grow items-center justify-center rounded bg-black px-3 py-2 text-center text-lg font-bold text-white caret-transparent duration-500 lg:py-0 xl:text-2xl"
                     onClick={() => copyToClipboard('0764237914')}
                 >
                     <span>
