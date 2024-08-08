@@ -1,5 +1,5 @@
 'use client'
-import React, { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import useCopyToClipboard from '../../hooks/useCopyToClipboard'
@@ -9,39 +9,16 @@ import {
     PhoneOutlined,
     TikTokOutlined,
 } from '@ant-design/icons'
-import { LoadingIconWrapper, useResponsiveMenu } from './custom'
+import {
+    LoadingIconWrapper,
+    useResponsiveMenu,
+    useLoadingStates,
+} from './custom'
 
 export const Navbar = () => {
     const { copyToClipboard, AlertComponent } = useCopyToClipboard()
     const { isOpen, setIsOpen, getMenuClasses } = useResponsiveMenu()
-
-    const [loadingStates, setLoadingStates] = useState({
-        phone: true,
-        facebook: true,
-        tikTok: true,
-    })
-
-    useEffect(() => {
-        const timers = {
-            phone: setTimeout(
-                () => setLoadingStates((prev) => ({ ...prev, phone: false })),
-                1000
-            ),
-            facebook: setTimeout(
-                () =>
-                    setLoadingStates((prev) => ({ ...prev, facebook: false })),
-                1000
-            ),
-            tikTok: setTimeout(
-                () => setLoadingStates((prev) => ({ ...prev, tikTok: false })),
-                1000
-            ),
-        }
-
-        return () => {
-            Object.values(timers).forEach((timer) => clearTimeout(timer))
-        }
-    }, [])
+    const loadingStates = useLoadingStates()
 
     return (
         <>

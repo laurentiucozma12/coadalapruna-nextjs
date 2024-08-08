@@ -1,5 +1,5 @@
 'use client'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import useLoadingIcon from '@/hooks/loadingComponent'
 import React from 'react'
 
@@ -33,6 +33,38 @@ const useResponsiveMenu = () => {
     return { isOpen, setIsOpen, getMenuClasses }
 }
 
+const useLoadingStates = () => {
+    const [loadingStates, setLoadingStates] = useState({
+        phone: true,
+        facebook: true,
+        tikTok: true,
+    })
+
+    useEffect(() => {
+        const timers = {
+            phone: setTimeout(
+                () => setLoadingStates((prev) => ({ ...prev, phone: false })),
+                1000
+            ),
+            facebook: setTimeout(
+                () =>
+                    setLoadingStates((prev) => ({ ...prev, facebook: false })),
+                1000
+            ),
+            tikTok: setTimeout(
+                () => setLoadingStates((prev) => ({ ...prev, tikTok: false })),
+                1000
+            ),
+        }
+
+        return () => {
+            Object.values(timers).forEach((timer) => clearTimeout(timer))
+        }
+    }, [])
+
+    return loadingStates
+}
+
 interface LoadingIconWrapperProps {
     isLoading: boolean
     Icon: React.FC
@@ -58,4 +90,4 @@ const LoadingIconWrapper: React.FC<LoadingIconWrapperProps> = ({
     )
 }
 
-export { useResponsiveMenu, LoadingIconWrapper }
+export { useResponsiveMenu, LoadingIconWrapper, useLoadingStates }

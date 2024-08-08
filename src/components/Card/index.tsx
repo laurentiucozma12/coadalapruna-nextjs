@@ -1,11 +1,15 @@
 import Image from 'next/image'
 import React from 'react'
 
+type LoadingType = 'eager' | 'lazy' | undefined
+
 type CardProps = {
     title?: string
     description?: React.ReactNode
     imageSrc: string
     imageAlt: string
+    imageLoading?: LoadingType
+    priority?: boolean
 }
 
 const Card: React.FC<CardProps> = ({
@@ -13,6 +17,8 @@ const Card: React.FC<CardProps> = ({
     description,
     imageSrc,
     imageAlt,
+    imageLoading,
+    priority,
 }) => {
     return (
         <div className="h-fit w-full overflow-hidden rounded bg-black text-white shadow-lg">
@@ -28,7 +34,8 @@ const Card: React.FC<CardProps> = ({
                 alt={imageAlt}
                 width={480}
                 height={300}
-                loading="lazy"
+                priority={priority}
+                loading={imageLoading} // This will now accept "eager" | "lazy" | undefined
             />
         </div>
     )
