@@ -1,6 +1,6 @@
 'use client'
 import { useState } from 'react'
-import useLoadingIcon from '@/hooks/loadingIcon'
+import useLoadingIcon from '@/hooks/loadingComponent'
 import React from 'react'
 
 const useResponsiveMenu = () => {
@@ -47,7 +47,7 @@ const LoadingIconWrapper: React.FC<LoadingIconWrapperProps> = ({
     const loadingIcon = useLoadingIcon({
         isLoading,
         width: 16,
-        text: <Icon />,
+        component: <Icon />,
     })
 
     return (

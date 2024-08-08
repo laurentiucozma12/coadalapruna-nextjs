@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import useCopyToClipboard from '../../hooks/useCopyToClipboard'
 import 'react-loading-skeleton/dist/skeleton.css'
 import { PhoneOutlined } from '@ant-design/icons'
-import useLoadingIcon from '@/hooks/loadingIcon'
+import useLoadingIcon from '@/hooks/loadingComponent'
 
 export const Contact = () => {
     const { copyToClipboard, AlertComponent } = useCopyToClipboard()
@@ -20,7 +20,7 @@ export const Contact = () => {
     const loadingIcon = useLoadingIcon({
         isLoading: loading,
         width: 20,
-        text: (
+        component: (
             <>
                 <PhoneOutlined />
             </>

@@ -1,13 +1,11 @@
 import Link from 'next/link'
 import Card from '../components/Card'
 import { Contact } from '../components/Contact'
-import { ImgCarousel } from '../components/Carousel'
 import { TopPhrase } from '@/components/TopPhrase'
 
 export default function Home() {
     return (
         <>
-            <ImgCarousel />
             <TopPhrase />
             <Contact />
             <div className="m-2 columns-1 sm:columns-2 lg:columns-3">
