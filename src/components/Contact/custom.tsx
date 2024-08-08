@@ -18,6 +18,10 @@ export const useContactLoading = () => {
         width: 20,
         component: <PhoneOutlined />,
     })
+<<<<<<< HEAD
+=======
+    // test
+>>>>>>> my-optimized-branch
 
     return { loading, loadingIcon }
 }
