@@ -1,31 +1,11 @@
 'use client'
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import useCopyToClipboard from '../../hooks/useCopyToClipboard'
-import 'react-loading-skeleton/dist/skeleton.css'
-import { PhoneOutlined } from '@ant-design/icons'
-import useLoadingIcon from '@/hooks/loadingComponent'
+import { useContactLoading } from './custom'
 
 export const Contact = () => {
     const { copyToClipboard, AlertComponent } = useCopyToClipboard()
-    const [loading, setLoading] = useState(true)
-
-    useEffect(() => {
-        const timer = setTimeout(() => {
-            setLoading(false)
-        }, 1000)
-
-        return () => clearTimeout(timer)
-    }, [])
-
-    const loadingIcon = useLoadingIcon({
-        isLoading: loading,
-        width: 20,
-        component: (
-            <>
-                <PhoneOutlined />
-            </>
-        ),
-    })
+    const { loadingIcon } = useContactLoading()
 
     return (
         <>

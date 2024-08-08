@@ -8,7 +8,11 @@ export default function Home() {
         <>
             <div className="m-2 lg:grid lg:grid-flow-row-dense lg:grid-cols-2 lg:grid-rows-2 lg:gap-2">
                 <div className="row-span-2 flex flex-grow items-center justify-center">
-                    <Card imageSrc="/480x300/sticla4.webp" imageAlt="Gift" />
+                    <Card
+                        imageSrc="/480x300/sticla4.webp"
+                        imageAlt="Gift"
+                        priority={true}
+                    />
                 </div>
                 <TopPhrase />
                 <Contact />
