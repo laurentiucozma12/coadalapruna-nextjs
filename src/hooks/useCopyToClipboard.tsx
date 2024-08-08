@@ -31,7 +31,7 @@ const useCopyToClipboard = () => {
                     fontWeight: 'bold',
                     borderColor: 'white',
                     caretColor: 'transparent',
-                    background: '#002A65',
+                    background: '#2159a1',
                     cursor: 'pointer',
                 }}
             />

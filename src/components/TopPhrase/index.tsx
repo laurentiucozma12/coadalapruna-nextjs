@@ -9,7 +9,7 @@ export const TopPhrase = () => {
             <AlertComponent />
             <div className="mb-2 flex h-full cursor-pointer flex-col lg:my-0">
                 <h1
-                    className="flex flex-grow items-center justify-center rounded bg-[#002A65] p-2 text-center text-lg font-bold text-white caret-transparent duration-500 lg:p-4 lg:py-0 xl:text-2xl"
+                    className="flex flex-grow items-center justify-center rounded bg-gradient-to-br from-[#2159a1] from-40% to-[#00cba7] p-2 text-center text-lg font-bold text-white caret-transparent duration-500 lg:p-4 lg:py-0 xl:text-2xl"
                     onClick={() => copyToClipboard('0764237914')}
                 >
                     Ai nevoie de un cadou pentru un bărbat adevarat sau de un

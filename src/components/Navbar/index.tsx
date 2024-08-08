@@ -22,7 +22,7 @@ export const Navbar = () => {
     return (
         <>
             <AlertComponent />
-            <nav className="fixed z-40 w-full bg-[#002A65] p-4 font-bold text-white shadow shadow-[#00cba7] sm:bg-scroll md:flex md:justify-between">
+            <nav className="fixed z-40 w-full bg-[#2159a1] p-4 font-bold text-white shadow shadow-[#00cba7] sm:bg-scroll md:flex md:justify-between">
                 <div className="container mx-auto flex items-center justify-between">
                     <Link
                         href="/"

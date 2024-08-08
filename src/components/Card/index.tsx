@@ -21,7 +21,7 @@ const Card: React.FC<CardProps> = ({
     priority,
 }) => {
     return (
-        <div className="mb-2 h-fit w-full overflow-hidden rounded bg-[#002A65] text-white shadow-lg lg:mb-0">
+        <div className="mb-2 h-fit w-full overflow-hidden rounded bg-gradient-to-br from-[#2159a1] from-30% to-[#00cba7] text-white shadow-lg lg:mb-0">
             {title && description && (
                 <div className="p-3">
                     <div className="mb-1 text-xl font-bold">{title}</div>

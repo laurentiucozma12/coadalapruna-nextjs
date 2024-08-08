@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 export const Footer = () => {
     return (
-        <footer className="bg-[#002A65] p-4 text-center">
+        <footer className="bg-[#2159a1] p-4 text-center">
             <Link
                 href={'https://www.linkedin.com/in/laurentiu-cozma/'}
                 target="_blank"

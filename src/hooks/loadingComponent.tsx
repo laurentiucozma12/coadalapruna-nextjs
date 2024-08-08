@@ -15,7 +15,7 @@ const useLoadingComponent = ({
     component,
 }: UseLoadingComponentProps) => {
     return isLoading ? (
-        <SkeletonTheme baseColor="#00cba7 " highlightColor="#002A65">
+        <SkeletonTheme baseColor="#00cba7" highlightColor="#2159a1">
             <Skeleton width={width} height={height} />
         </SkeletonTheme>
     ) : (
