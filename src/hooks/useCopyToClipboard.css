@@ -1,5 +1,5 @@
-.ant-alert-close-icon svg {
-    color: white;
+.ant-alert-success svg path {
+    fill: #00cba7; /* This changes the color of the checkmark */
 }
 
 .ant-alert {

@@ -22,11 +22,11 @@ export const Navbar = () => {
     return (
         <>
             <AlertComponent />
-            <nav className="fixed z-40 w-full bg-black p-4 font-bold text-white shadow shadow-black sm:bg-scroll md:flex md:justify-between">
+            <nav className="fixed z-40 w-full bg-[#002A65] p-4 font-bold text-white shadow shadow-[#00cba7] sm:bg-scroll md:flex md:justify-between">
                 <div className="container mx-auto flex items-center justify-between">
                     <Link
                         href="/"
-                        className="flex items-center text-xl duration-500 sm:text-2xl"
+                        className="flex items-center text-xl duration-500 hover:text-[#00cba7] sm:text-2xl"
                     >
                         <Image
                             className="me-2"
@@ -39,7 +39,7 @@ export const Navbar = () => {
                     </Link>
                     <div className={getMenuClasses()}>
                         <span
-                            className="mx-2 flex rounded px-1 caret-transparent duration-500 hover:cursor-pointer hover:bg-white hover:text-black"
+                            className="mx-2 flex rounded px-1 caret-transparent duration-500 hover:cursor-pointer hover:text-[#00cba7] hover:text-[00cba7]"
                             onClick={() => copyToClipboard('0764237914')}
                         >
                             <LoadingIconWrapper
@@ -50,7 +50,7 @@ export const Navbar = () => {
                         </span>
                         <Link
                             href="https://www.facebook.com/profile.php?id=100084996129874"
-                            className="mx-2 flex rounded px-1 duration-500 hover:bg-white hover:text-[#0866FF] hover:underline"
+                            className="mx-2 flex rounded px-1 duration-500 hover:text-[#00cba7] hover:underline"
                             target="_blank"
                         >
                             <LoadingIconWrapper
@@ -61,7 +61,7 @@ export const Navbar = () => {
                         </Link>
                         <Link
                             href="https://www.tiktok.com/@nelubulea"
-                            className="ms-2 flex rounded px-1 duration-500 hover:bg-white hover:text-black hover:underline"
+                            className="ms-2 flex rounded px-1 duration-500 hover:text-[#00cba7] hover:underline"
                             target="_blank"
                         >
                             <LoadingIconWrapper
@@ -71,7 +71,7 @@ export const Navbar = () => {
                             />
                         </Link>
                     </div>
-                    <div className="flex items-center text-xl duration-500 sm:text-2xl md:hidden">
+                    <div className="flex items-center text-xl duration-500 hover:text-[#00cba7] sm:text-2xl md:hidden">
                         <MenuOutlined onClick={() => setIsOpen(!isOpen)} />
                     </div>
                 </div>

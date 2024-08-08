@@ -27,8 +27,12 @@ const useCopyToClipboard = () => {
                     left: '50%',
                     transform: 'translate(-50%, -50%)',
                     position: 'fixed',
-                    color: 'white',
-                    background: 'black',
+                    color: '#00cba7',
+                    fontWeight: 'bold',
+                    borderColor: 'white',
+                    caretColor: 'transparent',
+                    background: '#002A65',
+                    cursor: 'pointer',
                 }}
             />
         )

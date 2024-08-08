@@ -18,10 +18,12 @@ const useResponsiveMenu = () => {
                 'h-[140px]',
                 'top-[67px]', // top-67px, height of navbar is 67px
                 'p-2',
-                'bg-black',
+                'bg-[#002A65]',
                 'w-full',
                 'gap-4',
                 'left-0',
+                'shadow-[#00cba7]',
+                'shadow',
             ]
         } else {
             menuClasses = ['hidden', 'md:flex']

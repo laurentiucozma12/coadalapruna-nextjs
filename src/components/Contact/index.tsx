@@ -10,9 +10,9 @@ export const Contact = () => {
     return (
         <>
             <AlertComponent />
-            <div className="flex h-full cursor-pointer flex-col">
+            <div className="mb-2 flex h-full cursor-pointer flex-col">
                 <h2
-                    className="flex flex-grow items-center justify-center rounded bg-black px-3 py-2 text-center text-lg font-bold text-white caret-transparent duration-500 lg:py-0 xl:text-2xl"
+                    className="flex flex-grow items-center justify-center rounded bg-[#002A65] px-3 pb-2 text-center text-lg font-bold text-white caret-transparent duration-500 lg:py-0 xl:text-2xl"
                     onClick={() => copyToClipboard('0764237914')}
                 >
                     <span>
@@ -20,9 +20,11 @@ export const Contact = () => {
                         celor dragi ție.
                         <br />
                         <span className="flex justify-center">
-                            {loadingIcon}
-                            <span className="mx-1">0764237914</span>
-                            {loadingIcon}
+                            <span className="mt-1 flex w-fit rounded px-1 duration-500 hover:text-[#00cba7]">
+                                {loadingIcon}
+                                <span className="mx-1">0764237914</span>
+                                {loadingIcon}
+                            </span>
                         </span>
                     </span>
                 </h2>
