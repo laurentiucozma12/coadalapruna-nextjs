@@ -30,18 +30,20 @@ export const Contact = () => {
     return (
         <>
             <AlertComponent />
-            <div className="m-2 cursor-pointer text-white">
+            <div className="flex h-full cursor-pointer flex-col">
                 <h2
-                    className="rounded bg-black p-2 text-center text-lg font-bold caret-transparent shadow-sm duration-500 sm:text-2xl"
+                    className="flex flex-grow items-center justify-center rounded bg-black px-3 text-center text-lg font-bold text-white caret-transparent duration-500 xl:text-2xl"
                     onClick={() => copyToClipboard('0764237914')}
                 >
-                    Contactează-mă pentru a putea creea un cadou frumos celor
-                    dragi ție.
-                    <br />
-                    <span className="flex justify-center">
-                        {loadingIcon}
-                        <span className="mx-1">0764237914</span>
-                        {loadingIcon}
+                    <span>
+                        Contactează-mă pentru a putea creea un cadou frumos
+                        celor dragi ție.
+                        <br />
+                        <span className="flex justify-center">
+                            {loadingIcon}
+                            <span className="mx-1">0764237914</span>
+                            {loadingIcon}
+                        </span>
                     </span>
                 </h2>
             </div>

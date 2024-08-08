@@ -6,9 +6,15 @@ import { TopPhrase } from '@/components/TopPhrase'
 export default function Home() {
     return (
         <>
-            <TopPhrase />
-            <Contact />
-            <div className="m-2 columns-1 sm:columns-2 lg:columns-3">
+            <div className="m-2 lg:grid lg:grid-flow-row-dense lg:grid-cols-2 lg:grid-rows-2 lg:gap-2">
+                <div className="row-span-2 flex flex-grow items-center justify-center">
+                    <Card imageSrc="/480x300/sticla4.webp" imageAlt="Gift" />
+                </div>
+                <TopPhrase />
+                <Contact />
+            </div>
+
+            <div className="m-2 columns-1 gap-2 sm:columns-2 lg:columns-3">
                 <div>
                     <Card
                         title="Despre mine 👨"
