@@ -15,7 +15,7 @@ export const useContactLoading = () => {
 
     const loadingIcon = useLoadingIcon({
         isLoading: loading,
-        width: 20,
+        width: 24,
         component: <PhoneOutlined />,
     })
 
